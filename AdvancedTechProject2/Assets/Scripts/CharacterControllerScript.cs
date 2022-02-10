@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CharacterControllerScript : MonoBehaviour
 {
     private CharacterController _controller;
+    private JumpTrigger jumptrigger;
 
     Vector3 move;
 
@@ -27,6 +28,19 @@ public class CharacterControllerScript : MonoBehaviour
         {
             Debug.Log("Controller found");
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        /*if (this.gameObject.tag == "Walkable")
+        {
+            Debug.Log("On The Ground");
+        }*/
+        /*if (this.gameObject.tag == "Jump Trigger")
+        {
+            Debug.Log("jumping");
+            //Jump();
+        }*/
     }
 
     void Gravity()
@@ -68,7 +82,7 @@ public class CharacterControllerScript : MonoBehaviour
         }
     }
 
-    void Jump()
+    public void Jump()
     {
         if(isGrounded)
         {
@@ -109,6 +123,10 @@ public class CharacterControllerScript : MonoBehaviour
         {
             Jump();
         }
+       /* if (jumptrigger.isJumping == true)
+        {
+            Jump();
+        }*/
 
         move = new Vector3(playerHorizontal, 0, playerVertical);
     }
