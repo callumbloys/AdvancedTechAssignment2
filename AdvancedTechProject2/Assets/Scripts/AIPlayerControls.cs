@@ -10,6 +10,8 @@ public class AIPlayerControls : MonoBehaviour
     public GameObject Player;
     public GameObject Door;
 
+    public bool destinationMissing;
+
     //public GameObject Objectivetext1;
     //public GameObject Objectivetext2;
 
@@ -37,9 +39,16 @@ public class AIPlayerControls : MonoBehaviour
             {
                 current_destination++;
             }
+            /*else
+            {
+            }*/
+        } 
+        else
+        {
+            Debug.Log("issue with path!");
         }
 
-        Debug.Log("destination " + current_destination);
-        Debug.Log("Keys " + KeyCollection.keysCollected);
+        //Debug.Log("destination " + current_destination);
+        //Debug.Log("Keys " + KeyCollection.keysCollected);
     }
 }

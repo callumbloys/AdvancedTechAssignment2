@@ -15738,7 +15738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &835447704
 Transform:
   m_ObjectHideFlags: 0
@@ -39710,6 +39710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1337163438160407334}
   Door: {fileID: 574019152}
+  destinationMissing: 0
   destination:
   - {fileID: 534467161}
   - {fileID: 1899484302}
