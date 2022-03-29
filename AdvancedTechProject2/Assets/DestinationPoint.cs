@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class DestinationPoint : MonoBehaviour
 {
-    public GameObject Finishtext;
 
-    private void Start()
-    {
-        Finishtext.SetActive(false);
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,9 +16,6 @@ public class DestinationPoint : MonoBehaviour
 
     private void Update()
     {
-        if (AIPlayerControls.current_destination == 11)
-        {
-            Finishtext.SetActive(true);
-        }
+        
     }
 }

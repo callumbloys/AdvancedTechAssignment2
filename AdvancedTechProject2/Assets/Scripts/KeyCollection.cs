@@ -17,7 +17,7 @@ public class KeyCollection : MonoBehaviour
         if(other.CompareTag("AICharacter"))
         {
             keysCollected++; 
-            //AIPlayerControls.current_destination++;
+            AIPlayerControls.current_destination++;
             Destroy(gameObject);
         }
     }
